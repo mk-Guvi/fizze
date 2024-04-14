@@ -43,5 +43,9 @@ https://ui.aceternity.com/
 
 - npm i framer-motion clsx tailwind-merge
 - npm install next-themes
+- npx shadcn-ui@latest add button
+- npm i framer-motion clsx tailwind-merge @tsparticles/react @tsparticles/engine @tsparticles/slim
+- npx shadcn-ui@latest add card
+
 
 
