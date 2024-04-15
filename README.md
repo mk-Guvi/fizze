@@ -46,6 +46,10 @@ https://ui.aceternity.com/
 - npx shadcn-ui@latest add button
 - npm i framer-motion clsx tailwind-merge @tsparticles/react @tsparticles/engine @tsparticles/slim
 - npx shadcn-ui@latest add card
+- npx shadcn-ui@latest add tooltip
+- npx shadcn-ui@latest add separator
+- npx shadcn-ui@latest add dropdown-menu
+- npx shadcn-ui@latest add input
 
 
 
