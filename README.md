@@ -50,6 +50,7 @@ https://ui.aceternity.com/
 - npx shadcn-ui@latest add separator
 - npx shadcn-ui@latest add dropdown-menu
 - npx shadcn-ui@latest add input
+- npx shadcn-ui@latest add form
 
 
 
