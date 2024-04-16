@@ -41,6 +41,12 @@ https://github.com/webprodigies/fuzzie-production
 
 https://ui.aceternity.com/
 
+https://neon.tech/ - DB
+
+https://app.uploadcare - ImageUpload
+
+https://clerk.com
+
 - npm i framer-motion clsx tailwind-merge
 - npm install next-themes
 - npx shadcn-ui@latest add button
@@ -51,6 +57,13 @@ https://ui.aceternity.com/
 - npx shadcn-ui@latest add dropdown-menu
 - npx shadcn-ui@latest add input
 - npx shadcn-ui@latest add form
-
-
-
+- npm i @prisma/client
+- npm i -D prisma
+- npx prisma init
+- npx prisma generate //migration script
+- npx prisma db push // sync schema to cloud
+- npx prisma studio
+- npm i @uploadcare/blocks --save-exact
+- npm install @clerk/nextjs
+- ngrok http https://localhost:3000
+- https://b133-2401-4900-1f2b-c34b-ad86-5a4c-b6f7-c3f.ngrok-free.app/api/clerk-webhook (Add in Clerk Webhook)
