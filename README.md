@@ -66,4 +66,4 @@ https://clerk.com
 - npm i @uploadcare/blocks --save-exact
 - npm install @clerk/nextjs
 - ngrok http https://localhost:3000
-- https://b133-2401-4900-1f2b-c34b-ad86-5a4c-b6f7-c3f.ngrok-free.app/api/clerk-webhook (Add in Clerk Webhook)
+-   https://db63-2401-4900-1f2b-c34b-14db-b23a-3132-4211.ngrok-free.app (Add in Clerk Webhook)
