@@ -66,4 +66,7 @@ https://clerk.com
 - npm i @uploadcare/blocks --save-exact
 - npm install @clerk/nextjs
 - ngrok http https://localhost:3000
--   https://db63-2401-4900-1f2b-c34b-14db-b23a-3132-4211.ngrok-free.app (Add in Clerk Webhook)
+- https://db63-2401-4900-1f2b-c34b-14db-b23a-3132-4211.ngrok-free.app (Add in Clerk Webhook)
+
+- npx shadcn-ui@latest add drawer
+- npx shadcn-ui@latest add switch
