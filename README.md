@@ -70,3 +70,13 @@ https://clerk.com
 
 - npx shadcn-ui@latest add drawer
 - npx shadcn-ui@latest add switch
+- npm install reactflow
+- npx shadcn-ui@latest add badge
+- npx shadcn-ui@latest add resizable
+- npx shadcn-ui@latest add sonner
+- npm i uuid
+- npm i --save-dev @types/uuid
+- npx shadcn-ui@latest add tabs
+- npx shadcn-ui@latest add accordion
+- npm install zustand
+- npx shadcn-ui@latest add command
