@@ -93,3 +93,5 @@ https://cron-job.org/
 - npm i @notionhq/client
 - npm i cmdk@0.2.0
 - npm i googleapis
+- npm i stripe
+- npx shadcn-ui@latest add progress

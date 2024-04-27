@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import ModalProvider from "@/providers/modal-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { BillingProvider } from "@/providers/billing-provider";
 
 const font = DM_Sans({ subsets: ["latin"] });
 
@@ -22,22 +23,24 @@ export default function RootLayout({
     <ClerkProvider
       publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
     >
-    <html lang="en">
-      <body className={font.className}>
-      {/* https://ui.shadcn.com/docs/dark-mode/next */}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ModalProvider>
-          {children}
-          <Toaster/>
-          </ModalProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+      <html lang="en">
+        <body className={font.className}>
+          {/* https://ui.shadcn.com/docs/dark-mode/next */}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <BillingProvider>
+              <ModalProvider>
+                {children}
+                <Toaster />
+              </ModalProvider>
+            </BillingProvider>
+          </ThemeProvider>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
