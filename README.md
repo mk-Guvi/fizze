@@ -47,6 +47,13 @@ https://app.uploadcare - ImageUpload
 
 https://clerk.com
 
+https://api.slack.com/apps
+
+https://discord.com/developers/applications
+
+https://www.notion.so/my-integrations
+
+
 - npm i framer-motion clsx tailwind-merge
 - npm install next-themes
 - npx shadcn-ui@latest add button
