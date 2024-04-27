@@ -14,8 +14,8 @@ import { Input } from "@/components/ui/input";
 import { onContentChange } from "@/lib/editor-utils";
 import GoogleFileDetails from "./google-file-details";
 import GoogleDriveFiles from "./google-drive-files";
-import ActionButton from './action-button'
-import { getFileMetaData } from '@/app/(main)/(pages)/connections/_actions/google-connection'
+import ActionButton from "./action-button";
+import { getFileMetaData } from "@/app/(main)/(pages)/connections/_actions/google-connection";
 import axios from "axios";
 import { toast } from "sonner";
 
@@ -51,24 +51,24 @@ const ContentBasedOnTitle = ({
 }: Props) => {
   const { selectedNode } = newState.editor;
   const title = selectedNode.data.title;
-
-  useEffect(() => {
-    const reqGoogle = async () => {
-      try {
-        const response: { data: { message: { files: any } } } = await axios.get(
-          "/api/drive"
-        );
-        if (response) {
-          console.log(response.data.message.files[0]);
-          toast.message("Fetched File");
-          setFile(response.data.message.files[0]);
-        } else {
-          toast.error("Something went wrong");
-        }
-      } catch (e) {
-        console.log(e);
+  const reqGoogle = async () => {
+    try {
+      const response: { data: { message: { files: any } } } = await axios.get(
+        "/api/drive"
+      );
+      console.log({ response });
+      if (response) {
+        console.log(response.data.message.files[0]);
+        toast.message("Fetched File");
+        setFile(response.data.message.files[0]);
+      } else {
+        toast.error("Something went wrong");
       }
-    };
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  useEffect(() => {
     reqGoogle();
   }, []);
 

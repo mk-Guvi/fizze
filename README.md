@@ -53,6 +53,8 @@ https://discord.com/developers/applications
 
 https://www.notion.so/my-integrations
 
+https://cron-job.org/
+
 
 - npm i framer-motion clsx tailwind-merge
 - npm install next-themes
@@ -89,3 +91,5 @@ https://www.notion.so/my-integrations
 - npx shadcn-ui@latest add command
 - npm i axios
 - npm i @notionhq/client
+- npm i cmdk@0.2.0
+- npm i googleapis
