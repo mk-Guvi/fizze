@@ -80,3 +80,5 @@ https://clerk.com
 - npx shadcn-ui@latest add accordion
 - npm install zustand
 - npx shadcn-ui@latest add command
+- npm i axios
+- npm i @notionhq/client

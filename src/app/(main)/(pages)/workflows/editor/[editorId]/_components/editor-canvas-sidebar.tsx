@@ -14,6 +14,8 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import {
+  fetchBotSlackChannels,
+  onConnections,
   // fetchBotSlackChannels,
   // onConnections,
   onDragStart,
@@ -26,6 +28,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import RenderConnectionAccordion from './render-connection-accordion'
+import RenderOutputAccordion from './render-output-accordian'
+import { useFuzzieStore } from '@/store'
 // import RenderConnectionAccordion from './render-connection-accordion'
 // import RenderOutputAccordion from './render-output-accordian'
 // import { useFuzzieStore } from '@/store'
@@ -37,19 +41,19 @@ type Props = {
 const EditorCanvasSidebar = ({ nodes }: Props) => {
   const { state } = useEditor()
   const { nodeConnection } = useNodeConnections()
-  // const { googleFile, setSlackChannels } = useFuzzieStore()
+  const { googleFile, setSlackChannels } = useFuzzieStore()
   useEffect(() => {
     if (state) {
-      // onConnections(nodeConnection, state, googleFile)
+      onConnections(nodeConnection, state, googleFile)
     }
   }, [state])
 
   useEffect(() => {
     if (nodeConnection.slackNode.slackAccessToken) {
-      // fetchBotSlackChannels(
-      //   nodeConnection.slackNode.slackAccessToken,
-      //   setSlackChannels
-      // )
+      fetchBotSlackChannels(
+        nodeConnection.slackNode.slackAccessToken,
+        setSlackChannels
+      )
     }
   }, [nodeConnection])
 
@@ -119,7 +123,7 @@ const EditorCanvasSidebar = ({ nodes }: Props) => {
                 ))}
               </AccordionContent>
             </AccordionItem>
-            {/* <AccordionItem
+            <AccordionItem
               value="Expected Output"
               className="px-2"
             >
@@ -130,7 +134,7 @@ const EditorCanvasSidebar = ({ nodes }: Props) => {
                 state={state}
                 nodeConnection={nodeConnection}
               />
-            </AccordionItem> */}
+            </AccordionItem>
           </Accordion>
         </TabsContent>
       </Tabs>

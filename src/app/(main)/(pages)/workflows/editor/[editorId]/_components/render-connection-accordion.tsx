@@ -76,7 +76,7 @@ const RenderConnectionAccordion = ({
     alwaysTrue ||
     (nodeConnection[connectionKey] &&
       accessTokenKey &&
-      connectionData[accessTokenKey!])
+      connectionData[accessTokenKey])
 
   return (
     <AccordionContent key={title}>

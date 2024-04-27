@@ -74,3 +74,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+a[aria-label="React Flow attribution"] {
+  display: none !important;
+}
+
+.react-flow__panel[data-message="Please only hide this attribution when you are subscribed to React Flow Pro: https://reactflow.dev/pro"] {
+  display: none !important;
+}
+

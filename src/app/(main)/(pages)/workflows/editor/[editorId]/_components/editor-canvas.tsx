@@ -28,6 +28,7 @@ import { v4 } from "uuid";
 import { EditorCanvasDefaultCardTypes } from "@/lib/constant";
 import FlowInstance from "./flow-instance";
 import EditorCanvasSidebar from "./editor-canvas-sidebar";
+import { onGetNodesEdges } from "../../../_actions/workflow-connections";
 // import FlowInstance from "./flow-instance";
 // import EditorCanvasSidebar from "./editor-canvas-sidebar";
 // import { onGetNodesEdges } from "../../../_actions/workflow-connections";
@@ -167,12 +168,12 @@ const EditorCanvas = (props: Props) => {
 
   const onGetWorkFlow = async () => {
     setIsWorkFlowLoading(true);
-    // const response = await onGetNodesEdges(pathname.split("/").pop()!);
-    // if (response) {
-    //   setEdges(JSON.parse(response.edges!));
-    //   setNodes(JSON.parse(response.nodes!));
-    //   setIsWorkFlowLoading(false);
-    // }
+    const response = await onGetNodesEdges(pathname.split("/").pop()!);
+    if (response) {
+      setEdges(JSON.parse(response.edges!));
+      setNodes(JSON.parse(response.nodes!));
+      setIsWorkFlowLoading(false);
+    }
     setIsWorkFlowLoading(false);
   };
 
@@ -182,10 +183,10 @@ const EditorCanvas = (props: Props) => {
 
   return (
     <ResizablePanelGroup direction="horizontal">
-      <ResizablePanel defaultSize={70}>
-        <div className="flex h-full items-center justify-center">
+      <ResizablePanel defaultSize={100}>
+        <div className="flex h-full  items-center justify-center">
           <div
-            style={{ width: "100%", height: "100%", paddingBottom: "70px" }}
+            style={{ width: "100%", height: "100%"}}
             className="relative"
           >
             {isWorkFlowLoading ? (
@@ -241,7 +242,7 @@ const EditorCanvas = (props: Props) => {
         </div>
       </ResizablePanel>
       <ResizableHandle />
-      <ResizablePanel defaultSize={40} className="relative sm:block">
+      <ResizablePanel defaultSize={100} className="relative sm:block">
         {isWorkFlowLoading ? (
           <div className="absolute flex h-full w-full items-center justify-center">
             <svg
